@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ImageViewCell: UICollectionViewCell {
     
@@ -53,6 +54,6 @@ class ImageViewCell: UICollectionViewCell {
     }
     
     public func configure(url: URL?) {
-        //todo: set image with kingfisher
+        image.kf.setImage(with:URL(string: "https://i.imgur.com/80xIR9E.jpg"))
     }
 }
