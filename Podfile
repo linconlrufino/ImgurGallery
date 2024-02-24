@@ -8,5 +8,6 @@ target 'ImgurGallery' do
   # Pods for ImgurGallery
     
     pod 'Kingfisher', '~> 7.0'
-
+    pod 'Alamofire'
+    
 end
