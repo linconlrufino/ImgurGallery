@@ -16,8 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        let layout = UICollectionViewFlowLayout()
-        let mainVC = GalleryViewController(collectionViewLayout: layout)
+        let mainVC = GalleryViewController()
         window?.rootViewController = mainVC
         window?.makeKeyAndVisible()
     }

@@ -7,37 +7,35 @@
 
 import UIKit
 
-class GalleryViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class GalleryViewController: UIViewController {
 
+    // MARK: - Layout Properties
+
+    private lazy var galleryView: GalleryView = {
+        let galleryView = GalleryView()
+        galleryView.translatesAutoresizingMaskIntoConstraints = false
+        return galleryView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView?.register(ImageViewCell.self, forCellWithReuseIdentifier: "imageViewCell")
+
+        addView()
+        buildViewConstraints()
     }
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 100
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageViewCell", for: indexPath)
-        
-        guard let imgurViewCell = (cell as? ImageViewCell) else { return cell }
-        
-        imgurViewCell.configure(url: nil)
-        
-        return imgurViewCell
+    // MARK: - View Codable
+    
+    private func addView() {
+        view.addSubview(galleryView)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 85, height: 85)
+    private func buildViewConstraints() {
+        NSLayoutConstraint.activate([
+            galleryView.topAnchor.constraint(equalTo: view.topAnchor),
+            galleryView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            galleryView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            galleryView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-           return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-        }
 }
