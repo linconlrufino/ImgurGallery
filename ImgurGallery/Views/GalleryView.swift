@@ -9,8 +9,29 @@ import SwiftUI
 import UIKit
 
 class GalleryView: UIView {
-    
+
     // MARK: - Layout Properties
+
+    private lazy var title: UILabel = {
+        let title = UILabel()
+        title.translatesAutoresizingMaskIntoConstraints = false
+        title.backgroundColor = .white
+        title.font = UIFont.boldSystemFont(ofSize: 32.0)
+        title.text = "Gallery Cats"
+        return title
+    }()
+    
+    private lazy var moreImagesButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("More Cats", for: .normal)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.backgroundColor = .systemYellow
+        button.layer.borderWidth = 1
+        button.layer.cornerRadius = 12
+        button.layer.masksToBounds = true
+        button.addTarget(self, action: #selector(getMoreImagesButton), for: .touchUpInside)
+        return button
+    }()
     
     private lazy var collectionView: UICollectionView = {
         let collection = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -36,7 +57,7 @@ class GalleryView: UIView {
             }
         }
         
-        galleryViewModel.getImages()
+        galleryViewModel.getImages(page: 1)
     }
     
     required init?(coder: NSCoder) {
@@ -46,25 +67,33 @@ class GalleryView: UIView {
     // MARK: - View Codable
     
     private func setupView () {
+        addSubview(title)
+        addSubview(moreImagesButton)
         addSubview(collectionView)
         buildViewConstraints()
+        self.backgroundColor = .white
         collectionView.register(ImageViewCell.self, forCellWithReuseIdentifier: ImageViewCell.identifier)
-//        collectionView.register(
-//            SeeMoreHeaderView.self,
-//            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
-//            withReuseIdentifier: SeeMoreHeaderView.identifier
-//        )
     }
     
     private func buildViewConstraints() {
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: topAnchor),
-            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            title.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
+            title.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+
+            collectionView.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 16),
+            collectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            collectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            
+            moreImagesButton.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 16),
+            moreImagesButton.centerXAnchor.constraint(equalTo: safeAreaLayoutGuide.centerXAnchor),
+            moreImagesButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            moreImagesButton.widthAnchor.constraint(equalToConstant: 180)
         ])
     }
     
+    @objc func getMoreImagesButton(_ sender: UIButton) {
+        galleryViewModel.getMoreImages()
+    }
 }
 
 // MARK: - DataSource
@@ -83,31 +112,6 @@ extension GalleryView: UICollectionViewDataSource {
         
         return imgurViewCell
     }
-    
-//    public func collectionView(
-//        _ collectionView: UICollectionView,
-//        viewForSupplementaryElementOfKind kind: String,
-//        at indexPath: IndexPath
-//    ) -> UICollectionReusableView {
-//        
-//        let headerView = collectionView.dequeueReusableSupplementaryView(
-//            ofKind: kind,
-//            withReuseIdentifier: SeeMoreHeaderView.identifier,
-//            for: indexPath
-//        )
-//        
-//        guard let typedHeaderView = headerView as? SeeMoreHeaderView
-//        else { return headerView }
-//        
-//        switch sections[indexPath.section] {
-//        case .nowShowing:
-//            typedHeaderView.configure(title: "Now Showing")
-//        case .popular:
-//            typedHeaderView.configure(title: "Popular")
-//        }
-//        
-//        return typedHeaderView
-//    }
 }
 
 // MARK: - Delegate
@@ -125,22 +129,5 @@ extension GalleryView: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
-    }
-}
-
-// MARK: - Preview
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        Container().edgesIgnoringSafeArea(.all)
-    }
-
-    struct Container: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> UIViewController {
-            UINavigationController(
-                rootViewController: GalleryViewController()
-            )
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
     }
 }

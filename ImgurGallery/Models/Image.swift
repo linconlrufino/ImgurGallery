@@ -15,13 +15,10 @@ struct GalleryData: Codable {
 
 struct Image: Codable {
     var link: String
+    var type: String?
 }
 
 struct ImageResponse {
     let success: Bool
     let images: [Image]
-}
-
-enum ImageError: Error {
-    case networkError
 }

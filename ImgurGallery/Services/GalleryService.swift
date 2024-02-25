@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 protocol GalleryServiceProtocol {
-    func getImages(completionHandler: @escaping (ImageResponse) -> ())
+    func getImages(page: Int, completionHandler: @escaping (ImageResponse) -> ())
     func urlPage(page: Int) -> String
 }
 
@@ -17,8 +17,8 @@ class GalleryService: GalleryServiceProtocol {
     let ClientId = "1ceddedc03a5d71"
     let baseUrl = "https://api.imgur.com/3/gallery/search/top"
         
-    func getImages(completionHandler: @escaping (ImageResponse) -> ()) {
-        let url = urlPage(page: 1)
+    func getImages(page: Int ,completionHandler: @escaping (ImageResponse) -> ()) {
+        let url = urlPage(page: page)
         let headers: HTTPHeaders = ["Authorization": "Client-ID \(ClientId)"]
 
         AF.request(url, headers: headers).responseDecodable(of: GalleryData.self) { [weak self] response in
