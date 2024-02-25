@@ -53,7 +53,8 @@ class ImageViewCell: UICollectionViewCell {
         ])
     }
     
-    public func configure(url: URL?) {
-        image.kf.setImage(with:URL(string: "https://i.imgur.com/80xIR9E.jpg"))
+    public func configure(url: String?) {
+        guard let urlImage = url else { return }
+        image.kf.setImage(with:URL(string: urlImage))
     }
 }

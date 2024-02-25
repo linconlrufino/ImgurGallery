@@ -23,10 +23,20 @@ class GalleryView: UIView {
 
     // MARK: - Initializer
     
+    private var galleryViewModel = GalleryViewModel()
+
     override public init(frame: CGRect) {
         super.init(frame: frame)
         
         setupView()
+        
+        galleryViewModel.images.bind{ [weak self] value in
+            DispatchQueue.main.async {
+                self?.collectionView.reloadData()
+            }
+        }
+        
+        galleryViewModel.getImages()
     }
     
     required init?(coder: NSCoder) {
@@ -61,7 +71,7 @@ class GalleryView: UIView {
 
 extension GalleryView: UICollectionViewDataSource {
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection sectionIndex: Int) -> Int {
-        return 75
+        galleryViewModel.images.value?.count ?? 0
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -69,7 +79,7 @@ extension GalleryView: UICollectionViewDataSource {
         
         guard let imgurViewCell = (cell as? ImageViewCell) else { return cell }
         
-        imgurViewCell.configure(url: nil)
+        imgurViewCell.configure(url: galleryViewModel.images.value?[indexPath.row].url)
         
         return imgurViewCell
     }

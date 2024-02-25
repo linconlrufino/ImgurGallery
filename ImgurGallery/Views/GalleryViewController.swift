@@ -16,7 +16,7 @@ class GalleryViewController: UIViewController {
         galleryView.translatesAutoresizingMaskIntoConstraints = false
         return galleryView
     }()
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
 

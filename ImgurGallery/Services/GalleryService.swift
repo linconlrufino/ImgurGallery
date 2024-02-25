@@ -14,26 +14,31 @@ protocol GalleryServiceProtocol {
 }
 
 class GalleryService: GalleryServiceProtocol {
-    let ClientId = "9e6db4ec707f8f3"
+    let ClientId = "1ceddedc03a5d71"
     let baseUrl = "https://api.imgur.com/3/gallery/search/top"
         
     func getImages(completionHandler: @escaping (ImageResponse) -> ()) {
         let url = urlPage(page: 1)
         let headers: HTTPHeaders = ["Authorization": "Client-ID \(ClientId)"]
-        
+
         AF.request(url, headers: headers).responseDecodable(of: GalleryData.self) { [weak self] response in
             guard let self else { return }
 
             switch response.result {
             case .success(let data):
-                completionHandler(ImageResponse(success: data.success, images: data.data))
+                DispatchQueue.main.async {
+                    let imageResponse = ImageResponse(success: data.success, images: data.data)
+                    completionHandler(imageResponse)
+                }
             case .failure(_):
-                completionHandler(ImageResponse(success: false, images: []))
+                DispatchQueue.main.async {
+                    completionHandler(ImageResponse(success: false, images: []))
+                }
             }
         }
     }
     
     func urlPage(page: Int) -> String {
-        return "\(baseUrl)/\(page)?q=cats&images!=null"
+        return "\(baseUrl)/\(page)?q=cats&q_type=jpg"
     }
 }
