@@ -23,6 +23,8 @@
 		7DD982A32B8C018300B1875C /* GalleryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982A22B8C018300B1875C /* GalleryViewModelTests.swift */; };
 		7DD982AB2B8C095A00B1875C /* ImgurGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982AA2B8C095A00B1875C /* ImgurGalleryUITests.swift */; };
 		7DD982AD2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */; };
+		7DD982B82B8C323E00B1875C /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DD982B62B8C323E00B1875C /* Mulish-Regular.ttf */; };
+		7DD982B92B8C323E00B1875C /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DD982B72B8C323E00B1875C /* Merriweather-Black.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		7DD982A82B8C095900B1875C /* ImgurGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImgurGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DD982AA2B8C095A00B1875C /* ImgurGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGalleryUITests.swift; sourceTree = "<group>"; };
 		7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7DD982B62B8C323E00B1875C /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
+		7DD982B72B8C323E00B1875C /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
 		B4857B2A3A8A38009AA23E65 /* Pods_ImgurGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImgurGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7DBB94FB4DFD266AE9E6 /* Pods-ImgurGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgurGallery.debug.xcconfig"; path = "Target Support Files/Pods-ImgurGallery/Pods-ImgurGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		D6787F9EFE34082153C3A801 /* Pods-ImgurGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgurGallery.release.xcconfig"; path = "Target Support Files/Pods-ImgurGallery/Pods-ImgurGallery.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				7DAF60692B8982A60089FE2C /* Assets.xcassets */,
+				7DD982B32B8C2C9200B1875C /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -199,6 +204,15 @@
 				7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */,
 			);
 			path = ImgurGalleryUITests;
+			sourceTree = "<group>";
+		};
+		7DD982B32B8C2C9200B1875C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7DD982B72B8C323E00B1875C /* Merriweather-Black.ttf */,
+				7DD982B62B8C323E00B1875C /* Mulish-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		8E1BAB7EDCC37B62690F51AA /* Frameworks */ = {
@@ -322,8 +336,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DD982B82B8C323E00B1875C /* Mulish-Regular.ttf in Resources */,
 				7DAF606D2B8982A60089FE2C /* LaunchScreen.storyboard in Resources */,
 				7DAF606A2B8982A60089FE2C /* Assets.xcassets in Resources */,
+				7DD982B92B8C323E00B1875C /* Merriweather-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,7 @@ class GalleryView: UIView {
         title.translatesAutoresizingMaskIntoConstraints = false
         title.backgroundColor = .white
         title.textColor = .black
-        title.font = UIFont.boldSystemFont(ofSize: 32.0)
+        title.font = UIFont(name: "Merriweather-Black", size: 24)
         title.text = "Gallery Cats"
         return title
     }()
@@ -25,6 +25,7 @@ class GalleryView: UIView {
     private lazy var moreImagesButton: UIButton = {
         let button = UIButton()
         button.setTitle("More Cats", for: .normal)
+        button.titleLabel?.font = UIFont(name: "Mulish-Regular", size: 18)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .systemYellow
         button.layer.borderWidth = 1
