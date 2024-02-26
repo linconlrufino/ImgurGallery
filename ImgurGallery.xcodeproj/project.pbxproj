@@ -25,6 +25,7 @@
 		7DD982AD2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */; };
 		7DD982B82B8C323E00B1875C /* Mulish-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DD982B62B8C323E00B1875C /* Mulish-Regular.ttf */; };
 		7DD982B92B8C323E00B1875C /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7DD982B72B8C323E00B1875C /* Merriweather-Black.ttf */; };
+		7DD982BC2B8C3CEC00B1875C /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982BB2B8C3CEC00B1875C /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7DD982B62B8C323E00B1875C /* Mulish-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-Regular.ttf"; sourceTree = "<group>"; };
 		7DD982B72B8C323E00B1875C /* Merriweather-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		7DD982BB2B8C3CEC00B1875C /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		B4857B2A3A8A38009AA23E65 /* Pods_ImgurGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImgurGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7DBB94FB4DFD266AE9E6 /* Pods-ImgurGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgurGallery.debug.xcconfig"; path = "Target Support Files/Pods-ImgurGallery/Pods-ImgurGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		D6787F9EFE34082153C3A801 /* Pods-ImgurGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgurGallery.release.xcconfig"; path = "Target Support Files/Pods-ImgurGallery/Pods-ImgurGallery.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 				7D3AAF342B8A360200179ED5 /* Views */,
 				7D3AAF332B8A35F500179ED5 /* ViewModels */,
 				7D3AAF382B8A3D7800179ED5 /* Services */,
+				7DD982BA2B8C3CB700B1875C /* Extensions */,
 				7D3AAF352B8A368800179ED5 /* Resources */,
 			);
 			path = ImgurGallery;
@@ -213,6 +216,14 @@
 				7DD982B62B8C323E00B1875C /* Mulish-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		7DD982BA2B8C3CB700B1875C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7DD982BB2B8C3CEC00B1875C /* UIColor+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		8E1BAB7EDCC37B62690F51AA /* Frameworks */ = {
@@ -411,6 +422,7 @@
 				7DAF60652B8982A30089FE2C /* GalleryViewController.swift in Sources */,
 				7D3AAF372B8A3CB300179ED5 /* GalleryViewModel.swift in Sources */,
 				7DAF60612B8982A30089FE2C /* AppDelegate.swift in Sources */,
+				7DD982BC2B8C3CEC00B1875C /* UIColor+.swift in Sources */,
 				7D3AAF402B8AAD9E00179ED5 /* Observable.swift in Sources */,
 				7DAF60752B8996300089FE2C /* ImageViewCell.swift in Sources */,
 				7D3AAF422B8AAE3100179ED5 /* ImageViewCellViewModel.swift in Sources */,

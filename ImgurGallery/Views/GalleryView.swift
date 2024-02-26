@@ -16,7 +16,7 @@ class GalleryView: UIView {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.backgroundColor = .white
-        title.textColor = .black
+        title.textColor = .TitleColor
         title.font = UIFont(name: "Merriweather-Black", size: 24)
         title.text = "Gallery Cats"
         return title
