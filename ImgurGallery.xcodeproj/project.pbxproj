@@ -20,9 +20,30 @@
 		7DAF606A2B8982A60089FE2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DAF60692B8982A60089FE2C /* Assets.xcassets */; };
 		7DAF606D2B8982A60089FE2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DAF606B2B8982A60089FE2C /* LaunchScreen.storyboard */; };
 		7DAF60752B8996300089FE2C /* ImageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DAF60742B8996300089FE2C /* ImageViewCell.swift */; };
+		7DD982A32B8C018300B1875C /* GalleryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982A22B8C018300B1875C /* GalleryViewModelTests.swift */; };
+		7DD982AB2B8C095A00B1875C /* ImgurGalleryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982AA2B8C095A00B1875C /* ImgurGalleryUITests.swift */; };
+		7DD982AD2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7D00D4342B8BF5EB00B783F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DAF60552B8982A30089FE2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DAF605C2B8982A30089FE2C;
+			remoteInfo = ImgurGallery;
+		};
+		7DD982AE2B8C095A00B1875C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DAF60552B8982A30089FE2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DAF605C2B8982A30089FE2C;
+			remoteInfo = ImgurGallery;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		7D00D4302B8BF5EA00B783F8 /* ImgurGalleryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImgurGalleryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3AAF362B8A3CB300179ED5 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		7D3AAF392B8A3E2C00179ED5 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
 		7D3AAF3B2B8A49CA00179ED5 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -37,17 +58,35 @@
 		7DAF606C2B8982A60089FE2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7DAF606E2B8982A60089FE2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DAF60742B8996300089FE2C /* ImageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewCell.swift; sourceTree = "<group>"; };
+		7DD982A22B8C018300B1875C /* GalleryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModelTests.swift; sourceTree = "<group>"; };
+		7DD982A82B8C095900B1875C /* ImgurGalleryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImgurGalleryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD982AA2B8C095A00B1875C /* ImgurGalleryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGalleryUITests.swift; sourceTree = "<group>"; };
+		7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurGalleryUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B4857B2A3A8A38009AA23E65 /* Pods_ImgurGallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImgurGallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF5C7DBB94FB4DFD266AE9E6 /* Pods-ImgurGallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgurGallery.debug.xcconfig"; path = "Target Support Files/Pods-ImgurGallery/Pods-ImgurGallery.debug.xcconfig"; sourceTree = "<group>"; };
 		D6787F9EFE34082153C3A801 /* Pods-ImgurGallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImgurGallery.release.xcconfig"; path = "Target Support Files/Pods-ImgurGallery/Pods-ImgurGallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7D00D42D2B8BF5EA00B783F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DAF605A2B8982A30089FE2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4FDB3157D4A0DD1F1C81F139 /* Pods_ImgurGallery.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD982A52B8C095900B1875C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +100,14 @@
 				D6787F9EFE34082153C3A801 /* Pods-ImgurGallery.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		7D00D4312B8BF5EB00B783F8 /* ImgurGalleryTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DD982A22B8C018300B1875C /* GalleryViewModelTests.swift */,
+			);
+			path = ImgurGalleryTests;
 			sourceTree = "<group>";
 		};
 		7D3AAF322B8A35E500179ED5 /* Models */ = {
@@ -110,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				7DAF605F2B8982A30089FE2C /* ImgurGallery */,
+				7D00D4312B8BF5EB00B783F8 /* ImgurGalleryTests */,
+				7DD982A92B8C095A00B1875C /* ImgurGalleryUITests */,
 				7DAF605E2B8982A30089FE2C /* Products */,
 				27CC27574B74ED0011BE1F6E /* Pods */,
 				8E1BAB7EDCC37B62690F51AA /* Frameworks */,
@@ -120,6 +169,8 @@
 			isa = PBXGroup;
 			children = (
 				7DAF605D2B8982A30089FE2C /* ImgurGallery.app */,
+				7D00D4302B8BF5EA00B783F8 /* ImgurGalleryTests.xctest */,
+				7DD982A82B8C095900B1875C /* ImgurGalleryUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +192,15 @@
 			path = ImgurGallery;
 			sourceTree = "<group>";
 		};
+		7DD982A92B8C095A00B1875C /* ImgurGalleryUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7DD982AA2B8C095A00B1875C /* ImgurGalleryUITests.swift */,
+				7DD982AC2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift */,
+			);
+			path = ImgurGalleryUITests;
+			sourceTree = "<group>";
+		};
 		8E1BAB7EDCC37B62690F51AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +212,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7D00D42F2B8BF5EA00B783F8 /* ImgurGalleryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D00D4382B8BF5EB00B783F8 /* Build configuration list for PBXNativeTarget "ImgurGalleryTests" */;
+			buildPhases = (
+				7D00D42C2B8BF5EA00B783F8 /* Sources */,
+				7D00D42D2B8BF5EA00B783F8 /* Frameworks */,
+				7D00D42E2B8BF5EA00B783F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7D00D4352B8BF5EB00B783F8 /* PBXTargetDependency */,
+			);
+			name = ImgurGalleryTests;
+			productName = ImgurGalleryTests;
+			productReference = 7D00D4302B8BF5EA00B783F8 /* ImgurGalleryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7DAF605C2B8982A30089FE2C /* ImgurGallery */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DAF60712B8982A60089FE2C /* Build configuration list for PBXNativeTarget "ImgurGallery" */;
@@ -171,6 +249,24 @@
 			productReference = 7DAF605D2B8982A30089FE2C /* ImgurGallery.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7DD982A72B8C095900B1875C /* ImgurGalleryUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DD982B02B8C095A00B1875C /* Build configuration list for PBXNativeTarget "ImgurGalleryUITests" */;
+			buildPhases = (
+				7DD982A42B8C095900B1875C /* Sources */,
+				7DD982A52B8C095900B1875C /* Frameworks */,
+				7DD982A62B8C095900B1875C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DD982AF2B8C095A00B1875C /* PBXTargetDependency */,
+			);
+			name = ImgurGalleryUITests;
+			productName = ImgurGalleryUITests;
+			productReference = 7DD982A82B8C095900B1875C /* ImgurGalleryUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -181,8 +277,16 @@
 				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					7D00D42F2B8BF5EA00B783F8 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7DAF605C2B8982A30089FE2C;
+					};
 					7DAF605C2B8982A30089FE2C = {
 						CreatedOnToolsVersion = 15.2;
+					};
+					7DD982A72B8C095900B1875C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 7DAF605C2B8982A30089FE2C;
 					};
 				};
 			};
@@ -200,17 +304,33 @@
 			projectRoot = "";
 			targets = (
 				7DAF605C2B8982A30089FE2C /* ImgurGallery */,
+				7D00D42F2B8BF5EA00B783F8 /* ImgurGalleryTests */,
+				7DD982A72B8C095900B1875C /* ImgurGalleryUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7D00D42E2B8BF5EA00B783F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DAF605B2B8982A30089FE2C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7DAF606D2B8982A60089FE2C /* LaunchScreen.storyboard in Resources */,
 				7DAF606A2B8982A60089FE2C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DD982A62B8C095900B1875C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +379,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7D00D42C2B8BF5EA00B783F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD982A32B8C018300B1875C /* GalleryViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DAF60592B8982A30089FE2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -276,7 +404,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7DD982A42B8C095900B1875C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DD982AD2B8C095A00B1875C /* ImgurGalleryUITestsLaunchTests.swift in Sources */,
+				7DD982AB2B8C095A00B1875C /* ImgurGalleryUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7D00D4352B8BF5EB00B783F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DAF605C2B8982A30089FE2C /* ImgurGallery */;
+			targetProxy = 7D00D4342B8BF5EB00B783F8 /* PBXContainerItemProxy */;
+		};
+		7DD982AF2B8C095A00B1875C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DAF605C2B8982A30089FE2C /* ImgurGallery */;
+			targetProxy = 7DD982AE2B8C095A00B1875C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7DAF606B2B8982A60089FE2C /* LaunchScreen.storyboard */ = {
@@ -290,6 +440,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7D00D4362B8BF5EB00B783F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J974G5Q3H8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linconlrufino.ImgurGalleryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImgurGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ImgurGallery";
+			};
+			name = Debug;
+		};
+		7D00D4372B8BF5EB00B783F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J974G5Q3H8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linconlrufino.ImgurGalleryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImgurGallery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ImgurGallery";
+			};
+			name = Release;
+		};
 		7DAF606F2B8982A60089FE2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -471,9 +659,54 @@
 			};
 			name = Release;
 		};
+		7DD982B12B8C095A00B1875C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J974G5Q3H8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linconlrufino.ImgurGalleryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImgurGallery;
+			};
+			name = Debug;
+		};
+		7DD982B22B8C095A00B1875C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J974G5Q3H8;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = linconlrufino.ImgurGalleryUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImgurGallery;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7D00D4382B8BF5EB00B783F8 /* Build configuration list for PBXNativeTarget "ImgurGalleryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D00D4362B8BF5EB00B783F8 /* Debug */,
+				7D00D4372B8BF5EB00B783F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7DAF60582B8982A30089FE2C /* Build configuration list for PBXProject "ImgurGallery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -488,6 +721,15 @@
 			buildConfigurations = (
 				7DAF60722B8982A60089FE2C /* Debug */,
 				7DAF60732B8982A60089FE2C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DD982B02B8C095A00B1875C /* Build configuration list for PBXNativeTarget "ImgurGalleryUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DD982B12B8C095A00B1875C /* Debug */,
+				7DD982B22B8C095A00B1875C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

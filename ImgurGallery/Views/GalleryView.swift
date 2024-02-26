@@ -16,6 +16,7 @@ class GalleryView: UIView {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
         title.backgroundColor = .white
+        title.textColor = .black
         title.font = UIFont.boldSystemFont(ofSize: 32.0)
         title.text = "Gallery Cats"
         return title
@@ -44,7 +45,7 @@ class GalleryView: UIView {
 
     // MARK: - Initializer
     
-    private var galleryViewModel = GalleryViewModel()
+    private var galleryViewModel = GalleryViewModel(galleryService: GalleryService())
 
     override public init(frame: CGRect) {
         super.init(frame: frame)

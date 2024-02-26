@@ -16,7 +16,7 @@ protocol GalleryServiceProtocol {
 class GalleryService: GalleryServiceProtocol {
     let ClientId = "1ceddedc03a5d71"
     let baseUrl = "https://api.imgur.com/3/gallery/search/top"
-        
+    
     func getImages(page: Int ,completionHandler: @escaping (ImageResponse) -> ()) {
         let url = urlPage(page: page)
         let headers: HTTPHeaders = ["Authorization": "Client-ID \(ClientId)"]

@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct GalleryViewModel {
+public struct GalleryViewModel {
     var images: Observable<[ImageViewCellViewModel]> = Observable([])
-    var galleryService = GalleryService()
-
+    let galleryService : GalleryServiceProtocol
+    
+    init(galleryService: GalleryServiceProtocol = GalleryService()) {
+        self.galleryService = galleryService
+    }
+    
     public func getImages(page: Int) {
         galleryService.getImages(page: page){  response in
             if response.success {
